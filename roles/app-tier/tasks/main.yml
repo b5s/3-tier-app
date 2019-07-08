@@ -3,11 +3,11 @@
 # Installation of packages based on inventory groups
 - name: Install tomcat
   yum:
-   name: "{{ item }}"
-   #name: ['{{ tomcat_pkg }}']
-   state: latest
-  with_items:
-   - "{{ tomcat_pkg }}"
+   #name: "{{ item }}"
+   name: "{{ tomcat_pkg }}"
+   state: present
+  #with_items:
+   #- "{{ tomcat_pkg }}"
 
 - name: Start tomcat
   service:

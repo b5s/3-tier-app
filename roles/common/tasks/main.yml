@@ -1,0 +1,11 @@
+---
+# Base config for all hosts
+#
+- name: enable repos
+  template:
+    #src: repo_template.j2
+    src: open_three-tier-app.repo
+    dest: /etc/yum.repos.d/open_three-tier-app.repo
+    mode: 0644
+
+
